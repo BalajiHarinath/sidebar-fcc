@@ -1,0 +1,147 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+body {
+  margin: 0;
+  background-color: rgb(239, 251, 253);
+}
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem;
+}
+.home-sidebar-btn {
+  position: fixed;
+  background: transparent;
+  border: transparent;
+  color: blue;
+  font-size: x-large;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  animation: bounce 2s ease-in-out infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.sidebar-container {
+  position: fixed;
+  width: 30vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* height: 100vh; */
+  min-width: 20rem;
+  background-color: white;
+  transition: all 0.3s ease;
+  transform: translateX(-100%);
+}
+.sidebar-visible {
+  transform: translateX(0);
+}
+.sidebar-header {
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+.sidebar-btn {
+  text-align: right;
+  color: red;
+  background: transparent;
+  border: transparent;
+  font-size: larger;
+  flex: 1;
+  cursor: pointer;
+}
+.list-container {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.3rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.item-container a {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  text-transform: capitalize;
+  padding: 1rem 1.5rem;
+  color: rgb(128, 124, 124);
+  transition: all 0.1s ease;
+  letter-spacing: 0.1;
+}
+
+.item-container a:hover {
+  background: hsl(210, 36%, 96%);
+  color: black;
+}
+.span-icon {
+  padding-right: 1rem;
+}
+.sidebar-text {
+  display: inline-block;
+}
+.home-model-btn {
+  background: black;
+  color: white;
+  margin: auto auto;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.model-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  z-index: -1;
+}
+.model-container {
+  width: 90vw;
+  max-width: 20rem;
+  height: 30vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10rem;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.5rem;
+}
+.visible {
+  visibility: visible;
+  z-index: 10;
+}
+.model-header {
+  flex: 1;
+  padding-top: 3rem;
+  padding-left: 2rem;
+}
+.model-close-btn {
+  background: transparent;
+  border: transparent;
+  color: red;
+  cursor: pointer;
+  font-size: larger;
+  align-items: top;
+  padding-bottom: 7rem;
+  padding-right: 0.7rem;
+}
